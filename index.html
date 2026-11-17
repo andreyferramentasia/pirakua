@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TI Pirakua · PGTA</title>
+  <meta name="description" content="Plano de Gestão Territorial e Ambiental (PGTA) da Terra Indígena Pirakua. Leia o livro online em Português ou Guarani e baixe o PDF.">
+  <meta name="theme-color" content="#1f4f5e">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@400;600;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="topbar" id="topo">
+    <a href="#inicio" class="brand" aria-label="TI Pirakua, início">
+      <span class="brand__ti">TI</span> Pirakua
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#sobre">O livro</a>
+      <a href="#bookWrap">Ler</a>
+      <a href="#sumario">Sumário</a>
+      <a href="#baixar">Baixar</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Edição do livro">
+      <button class="lang__btn is-active" data-lang="pt" type="button">Português</button>
+      <button class="lang__btn" data-lang="gn" type="button">Guarani</button>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" type="button">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===================== CAPA / HERO ===================== -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__pattern" aria-hidden="true"></div>
+    <div class="hero__faixa" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <p class="hero__kicker" data-i18n="kicker">Plano de Gestão Territorial e Ambiental - PGTA</p>
+      <h1 class="hero__title">
+        <span data-i18n="titleTop">TI</span>
+        <span>PIRAKUA</span>
+      </h1>
+      <svg class="wave" viewBox="0 0 200 16" aria-hidden="true"><path d="M2 8 Q 14.5 1 27 8 T 52 8 T 77 8 T 102 8 T 127 8 T 152 8 T 177 8 T 198 8"/></svg>
+      <p class="hero__date" data-i18n="date">Julho de 2026</p>
+      <div class="hero__actions">
+        <a href="#bookWrap" class="btn btn--sun">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5C5.5 4 9 4 12 6c3-2 6.5-2 9-.5V19c-2.5-1.5-6-1.5-9 .5-3-2-6.5-2-9-.5z"/><path d="M12 6v13.5"/></svg>
+          Ler o livro
+        </a>
+        <a href="assets/pdf/PIRAKUA_portugues_ebook.pdf" class="link-arrow js-download" download>
+          <svg viewBox="0 0 40 12" aria-hidden="true"><path d="M0 6h38M33 1l5 5-5 5"/></svg>
+          Baixar PDF
+        </a>
+      </div>
+    </div>
+    <a href="#sobre" class="circle-arrow hero__scroll" aria-label="Rolar para baixo">
+      <svg viewBox="0 0 24 40" aria-hidden="true"><path d="M12 2v34M3 27l9 9 9-9"/></svg>
+    </a>
+  </section>
+
+  <!-- ===================== SOBRE ===================== -->
+  <section class="about" id="sobre">
+    <div class="about__inner">
+      <div class="about__text">
+        <p class="eyebrow">Sobre o livro</p>
+        <h2 class="section-title">O livro</h2>
+        <svg class="wave wave--sun" viewBox="0 0 200 16" aria-hidden="true"><path d="M2 8 Q 14.5 1 27 8 T 52 8 T 77 8 T 102 8 T 127 8 T 152 8 T 177 8 T 198 8"/></svg>
+        <p class="statement">
+          O Plano de Gestão Territorial e Ambiental da Terra Indígena Pirakua foi construído junto ao
+          <em>Aty Guasu</em>, à comunidade e aos Agentes Socioambientais indígenas.
+        </p>
+        <p>
+          O <strong>PGTA</strong> nasceu de reuniões com o <em>Aty Guasu</em> (grande assembleia do povo
+          Guarani e Kaiowa), de encontros com toda a comunidade e do trabalho dos Agentes Socioambientais.
+        </p>
+        <p>
+          Neste livro são apresentados os lugares visitados, as reflexões feitas nos encontros com a
+          comunidade e com as lideranças, o etnomapeamento participativo das regiões da TI Pirakua e as
+          propostas da comunidade para a gestão do território.
+        </p>
+        <p class="about__langs">
+          Disponível em duas edições: <strong>Português</strong> e <strong>Guarani</strong>
+          <span class="muted">(Jejapoarã Rehegua Tekoha Ñeñangarekorã)</span>.
+        </p>
+      </div>
+      <figure class="about__photo">
+        <img src="assets/mata.jpg" alt="Vista da mata da Terra Indígena Pirakua a partir do morro" loading="lazy">
+        <figcaption>Vista da mata na TI Pirakua</figcaption>
+      </figure>
+    </div>
+    <div class="brush" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===================== LEITOR (LIVRO) ===================== -->
+  <section class="reader" id="leitor">
+    <div class="reader__head">
+      <div>
+        <p class="eyebrow eyebrow--light">Leitura online</p>
+        <h2 class="section-title section-title--light">Leia o livro</h2>
+      </div>
+      <p class="reader__edition">Edição: <strong id="editionName">Português</strong></p>
+    </div>
+
+    <div class="book-wrap" id="bookWrap">
+      <button class="book-nav book-nav--prev" id="prevBtn" aria-label="Página anterior" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+
+      <div class="book" id="book" tabindex="0" aria-label="Livro. Use as setas do teclado para virar as páginas">
+        <div class="book__loader" id="loader" aria-hidden="true"><span></span></div>
+      </div>
+
+      <button class="book-nav book-nav--next" id="nextBtn" aria-label="Próxima página" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <div class="controls">
+      <button class="ctrl" id="firstBtn" title="Capa" aria-label="Ir para a capa" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 5l-7 7 7 7M7 5v14"/></svg>
+      </button>
+      <div class="controls__range">
+        <input type="range" id="pageRange" min="1" max="74" value="1" aria-label="Página">
+        <output id="pageLabel">1 / 74</output>
+      </div>
+      <button class="ctrl" id="lastBtn" title="Última página" aria-label="Ir para a última página" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5l7 7-7 7M17 5v14"/></svg>
+      </button>
+      <span class="controls__sep"></span>
+      <button class="ctrl" id="thumbsBtn" title="Miniaturas" aria-label="Mostrar miniaturas" aria-pressed="false" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      </button>
+      <button class="ctrl" id="zoomBtn" title="Ampliar página" aria-label="Ampliar página" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg>
+      </button>
+      <button class="ctrl" id="fsBtn" title="Tela cheia" aria-label="Tela cheia" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+      </button>
+      <a class="ctrl ctrl--dl js-download" href="assets/pdf/PIRAKUA_portugues_ebook.pdf" download title="Baixar PDF" aria-label="Baixar PDF">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
+      </a>
+    </div>
+
+    <div class="thumbs" id="thumbs" hidden></div>
+    <p class="reader__hint">Use as setas ← → do teclado, arraste para os lados ou clique nas bordas da página.</p>
+  </section>
+
+  <!-- ===================== SUMÁRIO ===================== -->
+  <section class="toc" id="sumario">
+    <div class="toc__inner">
+      <p class="eyebrow">Capítulos</p>
+      <h2 class="section-title" id="tocTitle">Sumário</h2>
+      <svg class="wave wave--red" viewBox="0 0 200 16" aria-hidden="true"><path d="M2 8 Q 14.5 1 27 8 T 52 8 T 77 8 T 102 8 T 127 8 T 152 8 T 177 8 T 198 8"/></svg>
+      <p class="toc__lead">Clique em um capítulo para abrir o livro direto nele.</p>
+      <ol class="toc__list" id="tocList"></ol>
+    </div>
+  </section>
+
+  <!-- ===================== DOWNLOAD ===================== -->
+  <section class="download" id="baixar">
+    <div class="download__pattern" aria-hidden="true"></div>
+    <div class="download__inner">
+      <p class="eyebrow eyebrow--light">Download</p>
+      <h2 class="section-title section-title--light">Baixe o PDF</h2>
+      <svg class="wave wave--sun" viewBox="0 0 200 16" aria-hidden="true"><path d="M2 8 Q 14.5 1 27 8 T 52 8 T 77 8 T 102 8 T 127 8 T 152 8 T 177 8 T 198 8"/></svg>
+      <div class="dl-cards">
+        <article class="dl-card">
+          <img src="assets/pages/pt/t001.jpg" alt="Capa da edição em Português" loading="lazy">
+          <div class="dl-card__body">
+            <h3>Português</h3>
+            <p>Plano de Gestão Territorial e Ambiental – PGTA</p>
+            <p class="dl-card__meta">PDF · 146 páginas · 44 MB</p>
+            <div class="dl-card__actions">
+              <a class="btn btn--sun" href="assets/pdf/PIRAKUA_portugues_ebook.pdf" download>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
+                Baixar
+              </a>
+              <button class="btn btn--line js-read" data-lang="pt" type="button">Ler online</button>
+            </div>
+          </div>
+        </article>
+        <article class="dl-card">
+          <img src="assets/pages/gn/t001.jpg" alt="Capa da edição em Guarani" loading="lazy">
+          <div class="dl-card__body">
+            <h3>Guarani</h3>
+            <p>Jejapoarã Rehegua Tekoha Ñeñangarekorã</p>
+            <p class="dl-card__meta">PDF · 146 páginas · 44 MB</p>
+            <div class="dl-card__actions">
+              <a class="btn btn--sun" href="assets/pdf/PIRAKUA_guarani_ebook.pdf" download>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
+                Baixar
+              </a>
+              <button class="btn btn--line js-read" data-lang="gn" type="button">Ler online</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="footer">
+    <div class="footer__faixa" aria-hidden="true"></div>
+    <div class="footer__inner">
+      <p class="footer__brand"><span class="brand__ti">TI</span> Pirakua</p>
+      <p>Apoio: <strong>FUNBIO • CTI • RAIS</strong></p>
+      <p class="muted">© 2026 FUNBIO • CTI • RAIS. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== ZOOM ===================== -->
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox__bar">
+      <span id="lightboxLabel"></span>
+      <button class="ctrl" id="lightboxClose" aria-label="Fechar" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="lightbox__scroll" id="lightboxScroll">
+      <img id="lightboxImg" alt="">
+    </div>
+  </div>
+
+  <script src="assets/js/page-flip.browser.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
