@@ -25,16 +25,8 @@
   --ink: #1b1b1b;
   --white: #ffffff;
 
-  /* toques da RAIS (rais.org.br): oliva, tons de terra, areia e off-white quente */
-  --olive: #43493c;
-  --olive-2: #363b30;
-  --earth: #957051;
-  --peach: #fecea3;
-  --warm: #fffbf7;
-
   --font-title: "Gluten", "Comic Sans MS", cursive;
   --font-body: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-slab: "Roboto Slab", Georgia, serif;
 
   --radius: 14px;
   --shadow-book: 0 30px 60px -20px rgba(0, 0, 0, .55), 0 12px 24px -12px rgba(0, 0, 0, .45);
@@ -86,61 +78,6 @@ svg { width: 1em; height: 1em; }
 }
 .section-title--light { color: var(--cream); }
 
-/* rótulo discreto acima dos títulos (referência RAIS) */
-.eyebrow {
-  font-size: .85rem;
-  font-weight: 400;
-  letter-spacing: .02em;
-  color: var(--earth);
-  margin: 0 0 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.eyebrow::before { content: ""; width: 28px; height: 1px; background: currentColor; opacity: .7; }
-.eyebrow--light { color: var(--peach); }
-
-/* frase de destaque em serifa (referência RAIS) */
-.statement {
-  font-family: var(--font-slab);
-  font-weight: 600;
-  font-size: clamp(1.25rem, 2.3vw, 1.65rem);
-  line-height: 1.45;
-  color: var(--olive);
-  margin: 0 0 1em;
-}
-.statement em { color: var(--earth); }
-
-/* link com seta longa e fina */
-.link-arrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding: .8em .4em;
-  color: var(--peach);
-  font-size: .82rem;
-  font-weight: 500;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-.link-arrow svg { width: 40px; height: 12px; fill: none; stroke: currentColor; stroke-width: 1.4; transition: transform .25s ease; }
-.link-arrow:hover svg { transform: translateX(6px); }
-
-/* seta grande dentro de um círculo suave */
-.circle-arrow {
-  width: 84px;
-  height: 84px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: rgba(255, 251, 247, .1);
-  backdrop-filter: blur(4px);
-  transition: background .25s;
-}
-.circle-arrow svg { width: 22px; height: 38px; fill: none; stroke: var(--peach); stroke-width: 1.6; }
-.circle-arrow:hover { background: rgba(255, 251, 247, .22); }
-
 .wave {
   width: 140px;
   height: 14px;
@@ -186,28 +123,24 @@ svg { width: 1em; height: 1em; }
 .btn--line { color: var(--teal-800); border-color: var(--teal-800); background: transparent; }
 .btn--line:hover { background: var(--teal-800); color: var(--cream); }
 
-/* ---------- cabeçalho: pílula flutuante (referência RAIS) ---------- */
+/* ---------- cabeçalho ---------- */
 .topbar {
   position: fixed;
-  top: 12px;
-  left: clamp(8px, 2vw, 28px);
-  right: clamp(8px, 2vw, 28px);
+  inset: 0 0 auto 0;
   z-index: 50;
   display: flex;
   align-items: center;
   gap: 24px;
-  padding: 8px 10px 8px clamp(16px, 2vw, 28px);
-  border-radius: 999px;
+  padding: 12px var(--gutter);
   color: var(--cream);
-  background: rgba(14, 40, 48, .28);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 251, 247, .12);
-  transition: background .3s ease, box-shadow .3s ease;
+  background: linear-gradient(180deg, rgba(14, 40, 48, .55), transparent);
+  transition: background .3s ease, box-shadow .3s ease, padding .3s ease;
 }
 .topbar.is-solid {
-  background: rgba(67, 73, 60, .92);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, .22);
+  background: rgba(22, 62, 74, .94);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .2);
+  padding-block: 8px;
 }
 .brand {
   font-family: var(--font-title);
@@ -225,22 +158,19 @@ svg { width: 1em; height: 1em; }
 .nav a {
   text-decoration: none;
   font-weight: 500;
-  font-size: .74rem;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--peach);
-  padding: 8px 14px;
+  font-size: .92rem;
+  padding: 6px 14px;
   border-radius: 999px;
-  transition: background .2s, color .2s;
+  transition: background .2s;
 }
-.nav a:hover { background: rgba(255, 251, 247, .1); color: var(--warm); }
+.nav a:hover { background: rgba(255, 255, 255, .12); }
 
 .lang {
   display: flex;
   padding: 3px;
   border-radius: 999px;
-  background: transparent;
-  border: 1px solid rgba(254, 206, 163, .55);
+  background: rgba(0, 0, 0, .25);
+  border: 1px solid rgba(255, 255, 255, .2);
 }
 .lang__btn {
   border: 0;
@@ -465,7 +395,11 @@ svg { width: 1em; height: 1em; }
   width: 100%;
   height: 100%;
   filter: drop-shadow(0 22px 28px rgba(0, 0, 0, .45));
+  transition: transform .6s cubic-bezier(.4, 0, .2, 1);
 }
+/* livro fechado: capa (à direita) e contracapa (à esquerda) ficam centralizadas */
+.book.is-front .flip { transform: translateX(-25%); }
+.book.is-back .flip { transform: translateX(25%); }
 
 /* cada página do livro: um A4 deitado */
 .page {
@@ -726,7 +660,7 @@ input[type="range"]::-moz-range-thumb {
   transition: transform .25s;
 }
 .dl-card:hover { transform: translateY(-4px); }
-.dl-card img { width: 100%; aspect-ratio: 842 / 595; object-fit: cover; }
+.dl-card img { width: 100%; height: auto; aspect-ratio: 842 / 595; object-fit: cover; }
 .dl-card__body { padding: 22px 24px 26px; border-top: 8px solid var(--red); }
 .dl-card h3 { font-family: var(--font-title); font-weight: 600; font-size: 1.8rem; margin: 0 0 4px; color: var(--teal-800); text-transform: uppercase; }
 .dl-card p { margin: 0 0 4px; }
@@ -760,4 +694,65 @@ input[type="range"]::-moz-range-thumb {
 }
 .lightbox__scroll { flex: 1; overflow: auto; padding: 0 16px 16px; cursor: zoom-in; }
 .lightbox__scroll.is-big { cursor: zoom-out; }
-.lightbox__scroll img { width: 100%; max-width: 1800px; margin: 0 auto; bord
+.lightbox__scroll img { width: 100%; max-width: 1800px; margin: 0 auto; border-radius: 4px; }
+.lightbox__scroll.is-big img { width: 1800px; max-width: none; }
+
+/* ---------- animação ao rolar ---------- */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1); }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* ---------- responsivo ---------- */
+@media (max-width: 900px) {
+  .about__inner { grid-template-columns: 1fr; }
+  .about__photo { max-width: 480px; }
+  .about__photo img { aspect-ratio: 4 / 3; }
+}
+
+@media (max-width: 760px) {
+  .menu-toggle { display: flex; order: 3; }
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px var(--gutter) 16px;
+    background: rgba(22, 62, 74, .98);
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s, transform .2s;
+  }
+  .nav.is-open { opacity: 1; transform: none; pointer-events: auto; }
+  .nav a { padding: 12px 8px; border-bottom: 1px solid rgba(255, 255, 255, .1); border-radius: 0; }
+  .topbar { gap: 10px; }
+  .brand { font-size: 1.25rem; }
+  .lang__btn { padding: 5px 9px; font-size: .74rem; }
+
+  .book-nav { display: none; }
+  .controls { flex-wrap: wrap; border-radius: 20px; justify-content: center; }
+  .controls__range { flex-basis: 100%; order: -1; }
+  .controls__sep { display: none; }
+  .thumb img { height: 64px; }
+}
+
+/* telas estreitas: o livro mostra uma página por vez (A4 deitado) */
+@media (max-width: 600px) {
+  .book { aspect-ratio: 842 / 595; }
+  .book-wrap {
+    max-width: calc((100vh - var(--book-room)) * 842 / 595);
+    max-width: calc((100svh - var(--book-room)) * 842 / 595);
+  }
+}
+
+@media (max-width: 420px) {
+  .hero__content { padding-right: 56px; }
+  .about__photo figcaption { left: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}

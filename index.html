@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#1f4f5e">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@400;600;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@400;600;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -52,14 +52,14 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5C5.5 4 9 4 12 6c3-2 6.5-2 9-.5V19c-2.5-1.5-6-1.5-9 .5-3-2-6.5-2-9-.5z"/><path d="M12 6v13.5"/></svg>
           Ler o livro
         </a>
-        <a href="assets/pdf/PIRAKUA_portugues_ebook.pdf" class="link-arrow js-download" download>
-          <svg viewBox="0 0 40 12" aria-hidden="true"><path d="M0 6h38M33 1l5 5-5 5"/></svg>
+        <a href="assets/pdf/PIRAKUA_portugues_ebook.pdf" class="btn btn--ghost js-download" download>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
           Baixar PDF
         </a>
       </div>
     </div>
-    <a href="#sobre" class="circle-arrow hero__scroll" aria-label="Rolar para baixo">
-      <svg viewBox="0 0 24 40" aria-hidden="true"><path d="M12 2v34M3 27l9 9 9-9"/></svg>
+    <a href="#sobre" class="hero__scroll" aria-label="Rolar para baixo">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
     </a>
   </section>
 
@@ -67,16 +67,13 @@
   <section class="about" id="sobre">
     <div class="about__inner">
       <div class="about__text">
-        <p class="eyebrow">Sobre o livro</p>
+        <span class="chapter-num">1</span>
         <h2 class="section-title">O livro</h2>
         <svg class="wave wave--sun" viewBox="0 0 200 16" aria-hidden="true"><path d="M2 8 Q 14.5 1 27 8 T 52 8 T 77 8 T 102 8 T 127 8 T 152 8 T 177 8 T 198 8"/></svg>
-        <p class="statement">
-          O Plano de Gestão Territorial e Ambiental da Terra Indígena Pirakua foi construído junto ao
-          <em>Aty Guasu</em>, à comunidade e aos Agentes Socioambientais indígenas.
-        </p>
         <p>
-          O <strong>PGTA</strong> nasceu de reuniões com o <em>Aty Guasu</em> (grande assembleia do povo
-          Guarani e Kaiowa), de encontros com toda a comunidade e do trabalho dos Agentes Socioambientais.
+          O <strong>Plano de Gestão Territorial e Ambiental (PGTA)</strong> da Terra Indígena Pirakua
+          foi construído em reuniões com o <em>Aty Guasu</em> (grande assembleia do povo Guarani e Kaiowa),
+          encontros com toda a comunidade e com o trabalho dos Agentes Socioambientais indígenas.
         </p>
         <p>
           Neste livro são apresentados os lugares visitados, as reflexões feitas nos encontros com a
@@ -99,10 +96,7 @@
   <!-- ===================== LEITOR (LIVRO) ===================== -->
   <section class="reader" id="leitor">
     <div class="reader__head">
-      <div>
-        <p class="eyebrow eyebrow--light">Leitura online</p>
-        <h2 class="section-title section-title--light">Leia o livro</h2>
-      </div>
+      <h2 class="section-title section-title--light">Leia o livro</h2>
       <p class="reader__edition">Edição: <strong id="editionName">Português</strong></p>
     </div>
 
@@ -153,7 +147,6 @@
   <!-- ===================== SUMÁRIO ===================== -->
   <section class="toc" id="sumario">
     <div class="toc__inner">
-      <p class="eyebrow">Capítulos</p>
       <h2 class="section-title" id="tocTitle">Sumário</h2>
       <svg class="wave wave--red" viewBox="0 0 200 16" aria-hidden="true"><path d="M2 8 Q 14.5 1 27 8 T 52 8 T 77 8 T 102 8 T 127 8 T 152 8 T 177 8 T 198 8"/></svg>
       <p class="toc__lead">Clique em um capítulo para abrir o livro direto nele.</p>
@@ -165,12 +158,11 @@
   <section class="download" id="baixar">
     <div class="download__pattern" aria-hidden="true"></div>
     <div class="download__inner">
-      <p class="eyebrow eyebrow--light">Download</p>
       <h2 class="section-title section-title--light">Baixe o PDF</h2>
       <svg class="wave wave--sun" viewBox="0 0 200 16" aria-hidden="true"><path d="M2 8 Q 14.5 1 27 8 T 52 8 T 77 8 T 102 8 T 127 8 T 152 8 T 177 8 T 198 8"/></svg>
       <div class="dl-cards">
         <article class="dl-card">
-          <img src="assets/pages/pt/t001.jpg" alt="Capa da edição em Português" loading="lazy">
+          <img src="assets/pages/pt/p001.jpg" width="1556" height="1100" alt="Capa da edição em Português" loading="lazy">
           <div class="dl-card__body">
             <h3>Português</h3>
             <p>Plano de Gestão Territorial e Ambiental – PGTA</p>
@@ -185,7 +177,7 @@
           </div>
         </article>
         <article class="dl-card">
-          <img src="assets/pages/gn/t001.jpg" alt="Capa da edição em Guarani" loading="lazy">
+          <img src="assets/pages/gn/p001.jpg" width="1556" height="1100" alt="Capa da edição em Guarani" loading="lazy">
           <div class="dl-card__body">
             <h3>Guarani</h3>
             <p>Jejapoarã Rehegua Tekoha Ñeñangarekorã</p>

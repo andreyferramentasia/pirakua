@@ -184,6 +184,10 @@
     });
     flip.on("flip", (e) => { page = e.data; updateUI(); });
     flip.on("changeOrientation", () => updateUI());
+    // ao começar a abrir/fechar, o livro desliza de volta para o centro
+    flip.on("changeState", (e) => {
+      if (e.data === "flipping" || e.data === "user_fold") book.classList.remove("is-front", "is-back");
+    });
     flip.on("init", (e) => { page = e.data.page; updateUI(); });
     flip.loadFromHTML(host.querySelectorAll(".page"));
     page = flip.getCurrentPageIndex();
@@ -194,6 +198,10 @@
 
   function updateUI() {
     if (!flip) return;
+    // livro fechado: centraliza a capa / contracapa em vez de deixar meio livro vazio
+    const open = isPortrait();
+    book.classList.toggle("is-front", !open && page === 0);
+    book.classList.toggle("is-back", !open && page === LAST);
     // com o livro aberto mostramos o par esquerda/direita; no celular, uma página
     const [first, last] = isPortrait() ? [page, page] : pairOf(page);
     label.textContent = first === last ? `${first + 1} / ${PAGES}` : `${first + 1}–${last + 1} / ${PAGES}`;
